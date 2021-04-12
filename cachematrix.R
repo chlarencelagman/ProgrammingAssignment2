@@ -1,6 +1,6 @@
 
-#To cache the inverse of matrixbts
-makeCacheMatrix <- function(x = matrices()) {
+#To cache the inverse of matrix1
+makeCacheMatrix <- function(x = matrix()) {
     in <- NULL
     set <- function(r) {
         x <<- r
