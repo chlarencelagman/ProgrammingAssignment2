@@ -1,5 +1,5 @@
 
-#To cache the inverse of matrix1
+#To cache the inverse of matrixbts
 makeCacheMatrix <- function(x = matrixbts()) {
     inve <- NULL
     set <- function(r) {
@@ -15,7 +15,7 @@ makeCacheMatrix <- function(x = matrixbts()) {
          getinverse = getinverse)
 }
 
-#To perform the inverse of the matrix1
+#To perform the inverse of the matrixbts
 
 cacheSolve <- function(x, ...) {
          inve <- x$getinverse()
