@@ -1,13 +1,13 @@
 
 #To cache the inverse of matrixbts
 makeCacheMatrix <- function(x = matrix()) {
-    inve <- NULL
+    in <- NULL
     set <- function(r) {
         x <<- r
-        inve <<- NULL
+        in <<- NULL
     }
     get <- function() x
-    setinverse <- function(inverse) inve <<- inverse
+    setinverse <- function(inverse) in <<- inverse
     getinverse <- function() inve
     list(set = set, 
          get = get, 
@@ -15,16 +15,16 @@ makeCacheMatrix <- function(x = matrix()) {
          getinverse = getinverse)
 }
 
-#To perform the inverse of the matrixbts
+#To perform the inverse of the matrix1
 
 cacheSolve <- function(x, ...) {
-         inve <- x$getinverse()
+         in <- x$getinverse()
     if(!is.null(inv)) {
         message("getting cached data.")
-        return(inve)
+        return(in)
     }
-    matrixbts <- x$get()
-    inve <- solve(matrixbts)
+    matrices <- x$get()
+    inve <- solve(matrices)
     x$setinverse(inve)
-    inve
+    in
 }
